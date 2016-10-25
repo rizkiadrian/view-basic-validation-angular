@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<body >
+<div ng-app="myApp">
+<form name="form" novalidate>
+Vir name : <input type="text" ng-model="vir.name" name="name" validname required/>
+<p ng-show="form.name.$error.validname" class="error">Name only allowed character, dot and space</p>
+<p ng-show="form.name.$error.required" class="error">Name required</p>
+Vir email : <input type="text" ng-model="vir.email" name="email" validemail required/>
+<p ng-show="form.email.$error.validemail" class="error">Valid email requred</p>
+<p ng-show="form.email.$error.required" class="error">Email required</p>
+Vir url : <input type="text" ng-model="vir.url" name="url" validurl required/>
+<p ng-show="form.url.$error.validurl" class="error">Valid url requred</p>
+<p ng-show="form.url.$error.required" class="error">url required</p>
+Vir age : <input type="text" ng-model="vir.age" name="age" validage required/>
+<p ng-show="form.age.$error.validage" class="error">Valid age</p>
+<p ng-show="form.age.$error.required" class="error">age required</p>
+</form>
+
+<h3>resultdata</h3>
+<p ng-bind="vir.name"></p>
+<p ng-bind="vir.email"></p>
+<p ng-bind="vir.age"></p>
+<p ng-bind="vir.url"></p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="js/shared/angular-route.js"></script>
+<script src="js/controllers/mainController.js"></script>
+</body>
+</html>
